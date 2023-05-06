@@ -25,6 +25,17 @@ main{
     justify-content: space-between;
 }
 
+.main-header input{
+    padding: 10px;
+    border: 0;
+    width: 410px;
+    font-weight: 500;
+}
+
+.main-header input:focus{
+    border: 0;
+}
+
 .title > h1{
     font-size: 30px;
     margin-left: 0px;
@@ -50,7 +61,7 @@ main{
 .sidebar{
     width: 300px;
     height: 100vh;
-    background: #FAFAFA;
+    background: white;
     display: block;
     position: relative;
 }
@@ -71,6 +82,10 @@ main{
 
 .sidebar-item{
     margin: 40px 0px 0px 50px;
+}
+
+.sidebar-item a{
+    text-decoration: none;
 }
 
 .titulo{
@@ -99,6 +114,9 @@ main{
     margin-left: 30px;
     margin-top: 30px;
     border: 0;;
+    box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
 }
 
 .pc-img{
@@ -138,6 +156,7 @@ main{
     display: flex;
     flex-flow: row-reverse;
     gap: 20px;
+    
 }
 
 .comprar{
@@ -164,5 +183,10 @@ main{
 
 .card-body{
     display: flex;
-    
+    gap: 20px;
+}
+
+.card-body::before{
+    content: '';
+    background-image: url('./img/Flecha2.png');
 }
