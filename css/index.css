@@ -6,39 +6,48 @@
 
 body{
     background: #FAFAFA;
-}
-
-main{
     display: flex;
 }
 
 .main-container{
     display: block;
     width: 100%;
-    padding-left: 20px;
+    padding: 20px 30px 10px 30px;
 }
 
 .main-header{
-    padding: 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .main-header input{
     padding: 10px;
+    padding-left: 60px;
     border: 0;
+    border-radius: 20px;
     width: 410px;
     font-weight: 500;
 }
 
-.main-header input:focus{
-    border: 0;
+.searching-bar > img{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.searching-bar img:last-child{
+    position: absolute;
+    left: 90%;
+    cursor: pointer;
 }
 
 .title > h1{
-    font-size: 30px;
-    margin-left: 0px;
+    font-size: 1.875em;
 }
 
 .icons{
@@ -51,29 +60,32 @@ main{
 .icons > .icon{
     width: 50px;
     height: 50px;
+} 
+
+.banner{
+    width: 100%;
 }
 
 .banner > img{
     width: 100%;
-    height: 350px;
+    height: 300px;
+    border-radius: 50px;
+    margin-bottom: 100px;
 }
 
 .sidebar{
-    width: 300px;
-    height: 100vh;
+    width: 30%;
     background: white;
     display: block;
-    position: relative;
 }
 
-.sidebar :is(.sidebar-logo){
+.sidebar-logo{
     display: flex;
     justify-content: center;
 }
 
 .Logo{
-    width: 200px;
-    height: 200px;
+    width: 80%;
 }
 
 .sidebar-items{
@@ -101,34 +113,23 @@ main{
 }
 
 .help-button{
-    position: absolute;
-    top:90%;
-    margin-left: 50px;
+    position: fixed;
+    top: 88%;
+    right: 92.6%;
 }
 
-.card{
+ .card{
     display: flex;
     flex-direction: row;
-    width: 733px;
-    height: 313px;
-    margin-left: 30px;
-    margin-top: 30px;
-    border: 0;;
+    width: 100%;
+    padding: 0 40px 40px 0;
     box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
     -webkit-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
-    -moz-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75); 
 }
 
-.pc-img{
-    width: 45%;
-    height: 100%;
+ .pc-img{
     display: flex;
-    padding-right: -150px;
-}
-
-.pc-img img{
-    width: 259px;
-    height: 259px;
 }
 
 .card-info{
@@ -140,9 +141,10 @@ main{
     padding-left: 20px;
 }
 
+
 .card-text p{
     font-size: 16px;
-    margin-top: 15px;
+    margin-top: 2%;
     font-weight: 400;
     color: #5C5C5C;
 }
@@ -156,7 +158,6 @@ main{
     display: flex;
     flex-flow: row-reverse;
     gap: 20px;
-    
 }
 
 .comprar{
@@ -167,7 +168,6 @@ main{
     padding: 10px;
     font-size: 16px;
     width: 130px;
-    height: 47px;
 }
 
 .añadir{
@@ -175,18 +175,55 @@ main{
     padding: 10px;
     font-size: 16px;
     width: 130px;
-    height: 47px;
     background-color: white;
     border: 2px solid #009393;
     color: #009393;
-}
+} 
 
 .card-body{
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    padding: 10px; 
 }
 
-.card-body::before{
-    content: '';
-    background-image: url('./img/Flecha2.png');
+.card-body > img:first-child{
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 94.3%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.card-body > img:last-child{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 99%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+    .card-body{
+        display: block;
+    }
+
+    .card:not(.card--1){
+        margin-top: 30px;
+
+    }
+
+    .card-body > img{
+       display: none;
+    }
+
+    .card{
+        margin: 0 auto;
+    }
 }
