@@ -13,13 +13,14 @@ body{
     display: block;
     width: 100%;
     padding: 20px 30px 10px 30px;
+    overflow: hidden;
 }
 
 .main-header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 	1.875em;
 }
 
 .main-header input{
@@ -80,12 +81,14 @@ body{
 }
 
 .sidebar-logo{
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.Logo{
-    width: 80%;
+.sidebar-logo > img{
+    width: 171px;
+    height: 171px;
 }
 
 .sidebar-items{
@@ -106,26 +109,33 @@ body{
     font-weight: 500;
 }
 
-.last-titulo{
-    margin-left: 14px;
-    color: #5C5C5C;
-    font-weight: 500;
-}
-
 .help-button{
     position: fixed;
     top: 88%;
     right: 92.6%;
 }
 
+.card-body{
+    display: block;  
+}
+
+.card-section-title{
+    
+}
+
  .card{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 100%;
     padding: 0 40px 40px 0;
     box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
     -webkit-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75); 
+    
+}
+
+.card:not(.card--1){
+    margin-top: 1.875em;
 }
 
  .pc-img{
@@ -180,13 +190,6 @@ body{
     color: #009393;
 } 
 
-.card-body{
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    width: 100%;
-    padding: 10px; 
-}
 
 .card-body > img:first-child{
     z-index: 1;
@@ -207,23 +210,4 @@ body{
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
-}
-
-@media screen and (max-width: 1400px) {
-    .card-body{
-        display: block;
-    }
-
-    .card:not(.card--1){
-        margin-top: 30px;
-
-    }
-
-    .card-body > img{
-       display: none;
-    }
-
-    .card{
-        margin: 0 auto;
-    }
 }
