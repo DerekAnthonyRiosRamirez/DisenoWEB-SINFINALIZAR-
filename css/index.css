@@ -22,6 +22,13 @@ body{
     display: flex;
     justify-content: space-between;
     margin-bottom: 	1.875em;
+    align-items: center;
+}
+
+.toggle_btn > i{
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
 }
 
 .main-header input{
@@ -33,7 +40,7 @@ body{
     font-weight: 500;
 }
 
-.toggle_btn > img{
+.toggle_btn > i{
     width: 30px;
     height: 30px;
 }
@@ -191,10 +198,11 @@ body{
     width: 100%;
     display: none;
     margin-bottom: 1.875em;
-    border: 1px solid red;
+    padding: 1.875em 0px 1.875em 0px;
     box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
     -webkit-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 10px 27px -12px rgba(0,0,0,0.75); 
+    border-radius: 50px;
 }
 
 .ddm-icons{
@@ -241,6 +249,7 @@ body{
         display: flex;
         justify-content: space-evenly;
         /* padding: 0px 0px 1.5em 0px; */
+        display: none;
     }
 
     .dropdown_menu .ddm-items{
@@ -256,8 +265,13 @@ body{
         display: none;
     }
 
+    .dropdown_menu.active{
+        display: flex;
+        /* animation: animation 10s ease-in-out 10s 2 alternate forwards; */
+        transition: 0.5s;
+    }
+
     .ddm-header{
-        border: 1px solid lime;
         display: flex;
         align-items: center;
         height: 100%;
@@ -282,7 +296,6 @@ body{
 
     .ddm-logo img{
         width: 200px;
-        
     }
 }
 
@@ -295,9 +308,12 @@ body{
         display: block;
     }
 
+    .searching-bar input{
+        display: block;
+    }
+
     .ddm-items{
         display: flex;
         flex-direction: column;
-        border: 1px solid red;
     }
 }
