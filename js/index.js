@@ -8,6 +8,6 @@ toggleBtn.onclick = function (){
     const isOpen = dropdownMenu.classList.contains('open');
 
     toggleBtnImg.classList = isOpen
-    ? 'fa-solid fa-xmark'
+    ? 'fa-solid fa-terminal'
     : 'fa-solid fa-bars';
 }
