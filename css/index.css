@@ -149,6 +149,10 @@ span:hover{
     padding-left: 20px;
 }
 
+.card-title{
+    cursor: pointer;
+}
+
 .card-text p{
     font-size: 16px;
     margin-top: 2%;
