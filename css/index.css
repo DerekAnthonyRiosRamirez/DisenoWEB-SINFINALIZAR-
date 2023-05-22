@@ -257,6 +257,7 @@ span:hover{
     .dropdown_menu.active{
         display: flex;
         justify-content: center;
+        gap: 20px;
     }
 
     .ddm-header{
@@ -303,4 +304,10 @@ span:hover{
         gap: 20px;
     }
 
+    .ddm-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 }
